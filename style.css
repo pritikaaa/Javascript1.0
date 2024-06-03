@@ -1,0 +1,14 @@
+#box{
+    margin: 30px;
+    background-color: rgb(219, 218, 205);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
+}
+#button{
+
+    background-color: rgb(255, 252, 250);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+}
