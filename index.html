@@ -1,30 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript</title>
-    <script>
-        function myFunction(){
-            document.getElementById("demo").innerHTML = "Hello World";
-        }
-    </script>
-</head>
-<body>
-    <h1>
-        Submit Form
-    </h1>
-    <p id="demo" style="display:none">
-        Do you confirm to submit?
-    </p>
-     <button type="button" onclick='document.getElementById("demo").style.display = "block" '> Submit </button>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="bg-white min-h-screen flex flex-col">
+    <header class="bg-blue-500 dark:bg-blue-800 text-white py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Helping Hands</h1>
+            <nav>
+                <a href="#" class="mx-2">Home</a>
+                <a href="#" class="mx-2">About</a>
+                <a href="#" class="mx-2">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container mx-auto flex-1 flex flex-col items-center justify-center">
+        <h2 class="text-3xl text-center my-8">Together, we can make a difference</h2>
+        <p class="text-lg text-center mb-8">Join us in our mission to create a better world for all</p>
+       <button onclick="window.alert ('do you confirm?')" a href="#" class="bg-blue-500 dark:bg-blue-800 text-white px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition duration-300">Get Involved</a>
 
-    <button type="button" onclick='document.getElementById("demo").style.fontSize = "50px" '> Confirm </button> 
+       </button>
+    </main>
+    <footer class="bg-zinc-200 dark:bg-zinc-700 text-zinc-600 dark:text-zinc-300 py-4 text-center">
+        <p>&copy; 2023 NGO Name. All rights reserved.</p>
+    </footer>
+</div>
+<script>
+    const toggleDarkMode = () => {
+        const body = document.querySelector('body');
+        body.classList.toggle('dark');
+    };
 
-    <p id="demo">
-        Do you confirm to submit?
-    </p>
-    <script> document.getElementById("demo").innerHTML = "mi primero javascript"</script>
-
-</body>
+    const toggleButton = document.querySelector('.toggle-dark-mode');
+    toggleButton.addEventListener('click', toggleDarkMode);
+</script>
+  </body>
 </html>
